@@ -100,14 +100,14 @@ const Form = () => {
         }])
     }
 
-    const viewBlock = (id) => {
-        let data = blockItem.map((elem) => {
-            if (elem.id === id) {
-                SetShowABlock(elem.show)
-            }
-        });
-        return data;
-    }
+    // const viewBlock = (id) => {
+    //     let data = blockItem.map((elem) => {
+    //         if (elem.id === id) {
+    //             SetShowABlock(elem.show)
+    //         }
+    //     });
+    //     return data;
+    // }
 
     // const viewBlock = (view, id) => {
     //     let updatedBlockItem = blockItem.map((elem) => {
@@ -328,8 +328,8 @@ const Form = () => {
                                                 {blockItem.map((list) => (
                                                     <div className='flex gap-4 px-4 py-2 hover:bg-gray-300 ease-in-out duration-200' key={list.id}
                                                         onClick={() => {
-                                                            // SetShowABlock(list.show)
-                                                            viewBlock(list.id)
+                                                            SetShowABlock(list.show)
+                                                            // viewBlock(list.id)
                                                             setShowDropdown(!showDropdown);
                                                         }}>
                                                         <h1 className='text-md text-gray-700 '>{list.icon}</h1>
